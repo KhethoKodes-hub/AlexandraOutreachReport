@@ -354,128 +354,19 @@
             box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
         }
 
-        /* Mobile Responsive Fix for ALL Black Fonts */
         @media (max-width: 768px) {
-            /* Fix navigation bar text color on mobile */
-            .nav-pills {
-                flex-direction: column !important;
-                align-items: stretch !important;
-                width: 100% !important;
-            }
-            
-            .nav-item {
-                width: 100% !important;
-                margin-bottom: 8px !important;
-            }
-            
-            .nav-pills .nav-link {
-                color: #000000 !important;
-                background: rgba(255, 255, 255, 0.95) !important;
-                border: 2px solid #0066cc !important;
-                font-weight: 600;
-                width: 100% !important;
-                text-align: center !important;
-                padding: 12px !important;
-                margin: 0 0 8px 0 !important;
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                gap: 8px !important;
-            }
-            
-            .nav-pills .nav-link i {
-                color: #000000 !important;
-            }
-            
-            .nav-pills .nav-link.active {
-                background: #0066cc !important;
-                color: white !important;
-                border-color: #0066cc !important;
-            }
-            
-            .nav-pills .nav-link.active i {
-                color: white !important;
-            }
-            
-            /* Fix action buttons */
-            .header .d-flex.justify-content-center.gap-3.flex-wrap {
-                flex-direction: column !important;
-                gap: 10px !important;
-                width: 100% !important;
-            }
-            
-            .btn-custom, .pdf-btn {
-                width: 100% !important;
-                padding: 12px !important;
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                gap: 8px !important;
-            }
-            
-            .btn-custom {
-                color: #000000 !important;
-                background: rgba(255, 255, 255, 0.95) !important;
-                border: 2px solid #0066cc !important;
-            }
-            
-            .btn-custom i {
-                color: #000000 !important;
-            }
-            
-            .pdf-btn {
-                background: linear-gradient(135deg, #dc3545, #c82333) !important;
-                color: white !important;
-                border: 2px solid #dc3545 !important;
-            }
-            
-            .pdf-btn i {
-                color: white !important;
-            }
-            
-            /* Fix data sources badge */
-            .date-badge {
-                color: #000000 !important;
-                background: rgba(255, 255, 255, 0.95) !important;
-                border: 2px solid #0066cc !important;
-                font-size: 0.9rem !important;
-                padding: 10px 15px !important;
-                margin-top: 15px !important;
-            }
-            
-            .date-badge .pulse-dot {
-                background: #000000 !important;
-                margin-right: 8px !important;
-            }
-            
-            /* Fix header spacing */
-            .header {
-                padding: 20px 15px !important;
-            }
-            
-            .header h1 {
-                font-size: 1.8rem !important;
-            }
-            
-            .header h2 {
-                font-size: 1.2rem !important;
-            }
-            
-            .header p {
-                font-size: 0.95rem !important;
-            }
-            
-            .quick-stats {
-                grid-template-columns: 1fr !important;
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header h1 { font-size: 1.8rem !important; }
+            .header h1 { font-size: 1.8rem; }
             .stat-value { font-size: 2rem; }
             .quick-stats {
-                grid-template-columns: 1fr !important;
+                grid-template-columns: 1fr;
+            }
+            .nav-pills {
+                flex-direction: column !important;
+            }
+            .nav-pills .nav-link {
+                width: 100%;
+                margin-bottom: 10px;
+                justify-content: center;
             }
         }
 
@@ -505,6 +396,133 @@
             background: rgba(0, 102, 204, 0.2);
             transform: scale(1.1);
         }
+        /* Mobile Responsive Fix for Navbar Font Color */
+@media (max-width: 768px) {
+    /* Fix navigation bar text color on mobile ONLY */
+    .nav-pills .nav-link {
+        color: #000000 !important; /* Black text on mobile */
+        background: rgba(255, 255, 255, 0.95) !important;
+        border: 2px solid #0066cc !important;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+    
+    .nav-pills .nav-link i {
+        color: #000000 !important; /* Black icons on mobile */
+    }
+    
+    .nav-pills .nav-link.active {
+        background: #0066cc !important; /* Blue background for active */
+        color: white !important; /* White text for active */
+        border-color: #0066cc !important;
+    }
+    
+    .nav-pills .nav-link.active i {
+        color: white !important; /* White icons for active */
+    }
+    
+    /* Keep original styling for desktop */
+    @media (min-width: 769px) {
+        .nav-pills .nav-link {
+            color: white !important; /* White text on desktop */
+            background: rgba(255, 255, 255, 0.15) !important;
+        }
+        
+        .nav-pills .nav-link i {
+            color: white !important; /* White icons on desktop */
+        }
+    }
+}
+/* Mobile Responsive Fix for ALL Black Fonts */
+@media (max-width: 768px) {
+    /* Fix navigation bar text color on mobile */
+    .nav-pills .nav-link {
+        color: #000000 !important; /* Black text on mobile */
+        background: rgba(255, 255, 255, 0.95) !important;
+        border: 2px solid #0066cc !important;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+    
+    .nav-pills .nav-link i {
+        color: #000000 !important; /* Black icons on mobile */
+    }
+    
+    .nav-pills .nav-link.active {
+        background: #0066cc !important;
+        color: white !important;
+        border-color: #0066cc !important;
+    }
+    
+    .nav-pills .nav-link.active i {
+        color: white !important;
+    }
+    
+    /* Fix action buttons (Print, Download, Share) */
+    .btn-custom {
+        color: #000000 !important; /* Black text */
+        background: rgba(255, 255, 255, 0.95) !important;
+        border: 2px solid #0066cc !important;
+    }
+    
+    .btn-custom i {
+        color: #000000 !important; /* Black icons */
+    }
+    
+    .btn-custom:hover {
+        background: #0066cc !important;
+        color: white !important;
+        border-color: #0066cc !important;
+    }
+    
+    .btn-custom:hover i {
+        color: white !important;
+    }
+    
+    /* Fix data sources badge */
+    .date-badge {
+        color: #000000 !important; /* Black text */
+        background: rgba(255, 255, 255, 0.95) !important;
+        border: 2px solid #0066cc !important;
+    }
+    
+    .date-badge .pulse-dot {
+        background: #000000 !important; /* Black dot */
+    }
+    
+    /* Keep PDF button red (or make it black too if you prefer) */
+    .pdf-btn {
+        /* Option 1: Keep red as per original */
+        background: linear-gradient(135deg, #dc3545, #c82333) !important;
+        color: white !important;
+        border: 2px solid #dc3545 !important;
+    }
+    
+    .pdf-btn i {
+        color: white !important;
+    }
+    
+    /* Option 2: Make PDF button also black 
+    .pdf-btn {
+        color: #000000 !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        border: 2px solid #dc3545 !important;
+    }
+    
+    .pdf-btn i {
+        color: #000000 !important;
+    }
+    
+    .pdf-btn:hover {
+        background: #dc3545 !important;
+        color: white !important;
+    }
+    
+    .pdf-btn:hover i {
+        color: white !important;
+    }
+    */
+}
     </style>
 </head>
 <body>
@@ -520,10 +538,10 @@
                 <i class="fas fa-tint logo"></i>
                 <h1>Water Wise Alexandra Outreach</h1>
             </div>
-            <h2>Final Report - Extended Survey Analysis</h2>
-            <p>Comprehensive analysis of water usage, challenges, and conservation awareness in Alexandra township based on 68 household surveys. This expanded dataset provides deeper insights into community water management issues.</p>
+            <h2>Final Report - Community Survey Analysis</h2>
+            <p>Analysis of water usage, challenges, and conservation awareness in Alexandra township based on household survey data. This report identifies key issues and opportunities for water management interventions.</p>
             <div class="date-badge">
-                <span class="pulse-dot"></span>Data Sources: 68 Household Surveys (October-December 2025)
+                <span class="pulse-dot"></span>Data Sources: Household Surveys (November-December 2025)
             </div>
             
             <!-- Navigation Tabs -->
@@ -570,34 +588,34 @@
         <div class="quick-stats">
             <div class="stat-card primary">
                 <div class="stat-icon"><i class="fas fa-users"></i></div>
-                <div class="stat-value" data-target="68">0</div>
-                <div class="stat-label">Total Survey Responses</div>
+                <div class="stat-value" data-target="24">0</div>
+                <div class="stat-label">Valid Survey Responses</div>
                 <div class="progress mt-2">
                     <div class="progress-bar bg-primary" style="width: 100%"></div>
                 </div>
             </div>
             <div class="stat-card success">
                 <div class="stat-icon"><i class="fas fa-heartbeat"></i></div>
-                <div class="stat-value" data-target="72">0</div>
+                <div class="stat-value" data-target="87">0</div>
                 <div class="stat-label">Very Concerned (%)</div>
                 <div class="progress mt-2">
-                    <div class="progress-bar bg-success" style="width: 72%"></div>
+                    <div class="progress-bar bg-success" style="width: 87%"></div>
                 </div>
             </div>
             <div class="stat-card warning">
-                <div class="stat-icon"><i class="fas fa-water"></i></div>
-                <div class="stat-value" data-target="35">0</div>
-                <div class="stat-label">Frequent Shortages (%)</div>
+                <div class="stat-icon"><i class="fas fa-tint"></i></div>
+                <div class="stat-value" data-target="58">0</div>
+                <div class="stat-label">Water Shedding (%)</div>
                 <div class="progress mt-2">
-                    <div class="progress-bar bg-warning" style="width: 35%"></div>
+                    <div class="progress-bar bg-warning" style="width: 58%"></div>
                 </div>
             </div>
             <div class="stat-card info">
                 <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
-                <div class="stat-value" data-target="82">0</div>
+                <div class="stat-value" data-target="79">0</div>
                 <div class="stat-label">Workshop Interest (%)</div>
                 <div class="progress mt-2">
-                    <div class="progress-bar bg-info" style="width: 82%"></div>
+                    <div class="progress-bar bg-info" style="width: 79%"></div>
                 </div>
             </div>
         </div>
@@ -608,25 +626,24 @@
             <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
                 <div class="section-header">
                     <h2><i class="fas fa-chart-pie"></i> Alexandra Overview</h2>
-                    <p>Summary of water challenges and community engagement in Alexandra (68 surveys)</p>
+                    <p>Summary of water challenges and community engagement in Alexandra</p>
                 </div>
 
                 <div class="row g-4">
                     <div class="col-lg-8">
                         <div class="card">
                             <div class="card-body">
-                                <div class="card-title">Key Challenges Word Cloud (Extended Data)</div>
+                                <div class="card-title">Key Challenges Word Cloud</div>
                                 <div class="word-cloud">
-                                    <span style="font-size: 26px; color: #dc3545;">Drainage Issues</span>
-                                    <span style="font-size: 24px; color: #ff6b35;">Sewer Blockages</span>
-                                    <span style="font-size: 22px; color: #00a8e8;">Water Shedding</span>
-                                    <span style="font-size: 22px; color: #28a745;">Pollution</span>
-                                    <span style="font-size: 20px; color: #6f42c1;">Leakages</span>
-                                    <span style="font-size: 20px; color: #fd7e14;">Infrastructure</span>
-                                    <span style="font-size: 18px; color: #20c997;">Littering</span>
-                                    <span style="font-size: 18px; color: #e83e8c;">Education</span>
-                                    <span style="font-size: 16px; color: #17a2b8;">Communication</span>
-                                    <span style="font-size: 16px; color: #6610f2;">Maintenance</span>
+                                    <span style="font-size: 24px; color: #dc3545;">Water Shedding</span>
+                                    <span style="font-size: 22px; color: #ff6b35;">Drainage Issues</span>
+                                    <span style="font-size: 20px; color: #00a8e8;">Sewer Blockages</span>
+                                    <span style="font-size: 20px; color: #28a745;">Pollution</span>
+                                    <span style="font-size: 18px; color: #6f42c1;">Leakages</span>
+                                    <span style="font-size: 18px; color: #fd7e14;">No Communication</span>
+                                    <span style="font-size: 16px; color: #20c997;">Littering</span>
+                                    <span style="font-size: 16px; color: #e83e8c;">Infrastructure</span>
+                                    <span style="font-size: 14px; color: #17a2b8;">Education</span>
                                 </div>
                             </div>
                         </div>
@@ -635,7 +652,7 @@
                     <div class="col-lg-4">
                         <div class="card">
                             <div class="card-body">
-                                <div class="card-title">Survey Distribution Timeline</div>
+                                <div class="card-title">Survey Timeline</div>
                                 <div class="chart-container">
                                     <canvas id="timelineChart"></canvas>
                                 </div>
@@ -652,15 +669,15 @@
                                 </div>
                                 <div class="row text-center mt-3 pt-3 border-top">
                                     <div class="col-4">
-                                        <div class="stat-value text-primary">82%</div>
+                                        <div class="stat-value text-primary">79%</div>
                                         <div class="stat-label">Workshop Interest</div>
                                     </div>
                                     <div class="col-4">
-                                        <div class="stat-value text-primary">76%</div>
+                                        <div class="stat-value text-primary">71%</div>
                                         <div class="stat-label">Willing to Adopt</div>
                                     </div>
                                     <div class="col-4">
-                                        <div class="stat-value text-primary">72%</div>
+                                        <div class="stat-value text-primary">87%</div>
                                         <div class="stat-label">Very Concerned</div>
                                     </div>
                                 </div>
@@ -671,14 +688,13 @@
                     <div class="col-12">
                         <div class="card insights-card">
                             <div class="card-body">
-                                <div class="card-title">Key Findings from Expanded Alexandra Data</div>
+                                <div class="card-title">Key Findings from Alexandra</div>
                                 <ul class="insights-list">
-                                    <li><i class="fas fa-exclamation-triangle"></i> <strong>Drainage Crisis (58%):</strong> Majority report drainage system failures causing flooding and sanitation issues</li>
-                                    <li><i class="fas fa-tint"></i> <strong>Sewer Blockages (52%):</strong> Over half of respondents report sewer overflows as a major issue</li>
-                                    <li><i class="fas fa-trash"></i> <strong>Pollution Problems (48%):</strong> River and drain pollution from littering remains critical</li>
-                                    <li><i class="fas fa-tools"></i> <strong>Infrastructure Neglect:</strong> 68% rate water infrastructure as "Poor" or "Very Poor"</li>
-                                    <li><i class="fas fa-graduation-cap"></i> <strong>High Engagement Potential:</strong> 82% interested in workshops, 76% willing to adopt conservation practices</li>
-                                    <li><i class="fas fa-user-graduate"></i> <strong>Education Gap:</strong> Only 32% received water conservation education</li>
+                                    <li><i class="fas fa-exclamation-triangle"></i> <strong>Severe Water Shedding:</strong> 58% experience frequent water shortages, with poor communication about schedules</li>
+                                    <li><i class="fas fa-water"></i> <strong>Drainage Crisis:</strong> Widespread drainage system failures causing flooding and sanitation issues</li>
+                                    <li><i class="fas fa-trash"></i> <strong>Pollution Problems:</strong> River pollution from littering and illegal dumping creating health hazards</li>
+                                    <li><i class="fas fa-tools"></i> <strong>Infrastructure Neglect:</strong> 83% rate water infrastructure as "Poor" or "Very Poor"</li>
+                                    <li><i class="fas fa-graduation-cap"></i> <strong>High Engagement Potential:</strong> Strong interest in workshops and water conservation education</li>
                                 </ul>
                             </div>
                         </div>
@@ -690,7 +706,7 @@
             <div class="tab-pane fade" id="quantitative" role="tabpanel" aria-labelledby="quantitative-tab">
                 <div class="section-header">
                     <h2><i class="fas fa-chart-bar"></i> Quantitative Analysis</h2>
-                    <p>Statistical analysis of 68 household surveys from Alexandra</p>
+                    <p>Statistical analysis of household survey data from Alexandra</p>
                 </div>
 
                 <div class="row g-4">
@@ -708,7 +724,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="card">
                             <div class="card-body">
-                                <div class="card-title">Dwelling Types (68 surveys)</div>
+                                <div class="card-title">Dwelling Types</div>
                                 <div class="chart-container">
                                     <canvas id="dwellingChart"></canvas>
                                 </div>
@@ -785,7 +801,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="card">
                             <div class="card-body">
-                                <div class="card-title">Report Knowledge</div>
+                                <div class="card-title">Report Knowledge Gap</div>
                                 <div class="chart-container">
                                     <canvas id="reportChart"></canvas>
                                 </div>
@@ -796,7 +812,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="card-title">Community Issues Reported (Top 5)</div>
+                                <div class="card-title">Community Issues Reported</div>
                                 <div class="chart-container">
                                     <canvas id="issuesChart"></canvas>
                                 </div>
@@ -810,7 +826,7 @@
             <div class="tab-pane fade" id="qualitative" role="tabpanel" aria-labelledby="qualitative-tab">
                 <div class="section-header">
                     <h2><i class="fas fa-comments"></i> Qualitative Insights</h2>
-                    <p>Community voices and direct quotes from Alexandra residents (68 surveys)</p>
+                    <p>Community voices and direct quotes from Alexandra residents</p>
                 </div>
 
                 <div class="row g-4">
@@ -819,17 +835,17 @@
                             <div class="card-body">
                                 <div class="card-title">Resident Voices - Direct Quotes</div>
                                 <div class="quote-text" style="font-style: italic; padding: 15px; background: rgba(0,102,204,0.05); border-radius: 10px; margin-bottom: 15px;">
-                                    "When it rains, there is no drainage system for water to go so it floods the roads and causes potholes"
+                                    "Water shedding is a problem and no one is informed when it will happen"
                                 </div>
                                 <div class="quote-author" style="text-align: right; color: #666;">- Alexandra Resident</div>
                                 
                                 <div class="quote-text" style="font-style: italic; padding: 15px; background: rgba(0,102,204,0.05); border-radius: 10px; margin-bottom: 15px; margin-top: 20px;">
-                                    "All toilets in the yard are blocked and throwing waste everywhere so littering is a problem"
+                                    "Water drainage are not working, even causes rats and the smell is bad cause water is dirty"
                                 </div>
                                 <div class="quote-author" style="text-align: right; color: #666;">- Alexandra Resident</div>
                                 
                                 <div class="quote-text" style="font-style: italic; padding: 15px; background: rgba(0,102,204,0.05); border-radius: 10px; margin-bottom: 15px; margin-top: 20px;">
-                                    "Blockage and drains and sewer and they never attend to us or maintain the infrastructure"
+                                    "People throwing chemicals and rubbish in the river"
                                 </div>
                                 <div class="quote-author" style="text-align: right; color: #666;">- Alexandra Resident</div>
                             </div>
@@ -839,7 +855,7 @@
                     <div class="col-lg-4">
                         <div class="card">
                             <div class="card-body">
-                                <div class="card-title">Biggest Challenges (Frequency)</div>
+                                <div class="card-title">Biggest Challenges</div>
                                 <div class="chart-container">
                                     <canvas id="challengesChart"></canvas>
                                 </div>
@@ -855,20 +871,20 @@
                                     <div class="col-md-6">
                                         <h4 style="color: var(--dark-blue); margin-bottom: 15px;">Common Suggestions</h4>
                                         <ul class="insights-list">
-                                            <li><i class="fas fa-graduation-cap"></i> <strong>Education Programs (42%):</strong> "Educate each other", "Workshops on water usage"</li>
-                                            <li><i class="fas fa-wrench"></i> <strong>Infrastructure Maintenance (38%):</strong> "Maintain drainage systems", "Fix pipes"</li>
-                                            <li><i class="fas fa-trash-alt"></i> <strong>Waste Management (35%):</strong> "People need to stop littering"</li>
-                                            <li><i class="fas fa-tools"></i> <strong>Regular Maintenance (32%):</strong> "Regularly check on infrastructure"</li>
+                                            <li><i class="fas fa-graduation-cap"></i> <strong>Education Programs:</strong> "Educate people and the kids"</li>
+                                            <li><i class="fas fa-bullhorn"></i> <strong>Better Communication:</strong> "Inform the community when water shedding will happen"</li>
+                                            <li><i class="fas fa-trash-alt"></i> <strong>Waste Management:</strong> "Have a dumping site where people don't throw dirt in the river"</li>
+                                            <li><i class="fas fa-wrench"></i> <strong>Infrastructure Maintenance:</strong> "Municipality should just come and fix"</li>
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
                                         <h4 style="color: var(--dark-blue); margin-bottom: 15px;">Specific Requests</h4>
                                         <ul class="insights-list">
-                                            <li><i class="fas fa-water"></i> "More drainage systems installed"</li>
-                                            <li><i class="fas fa-toilet"></i> "Have toilets everywhere and unblock them"</li>
-                                            <li><i class="fas fa-users"></i> "Government should try fix the pipes"</li>
-                                            <li><i class="fas fa-ban"></i> "Implement By laws to water laws"</li>
-                                            <li><i class="fas fa-tap"></i> "More taps and toilets"</li>
+                                            <li><i class="fas fa-tools"></i> "More drainage systems installed"</li>
+                                            <li><i class="fas fa-water"></i> "Maintenance for drains"</li>
+                                            <li><i class="fas fa-users"></i> "Teach people how to use water"</li>
+                                            <li><i class="fas fa-ban"></i> "People must stop littering"</li>
+                                            <li><i class="fas fa-car"></i> "Less car wash [businesses wasting water]"</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -890,34 +906,34 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="card-title">Sentiment Analysis Summary (68 surveys)</div>
+                                <div class="card-title">Sentiment Analysis Summary</div>
                                 <div class="row text-center">
                                     <div class="col-md-3 mb-3">
                                         <div class="p-3 bg-danger bg-opacity-10 rounded">
                                             <i class="fas fa-exclamation-triangle fa-2x text-danger mb-2"></i>
                                             <div class="fw-bold">58%</div>
-                                            <small>Drainage System Issues</small>
+                                            <small>Frustration with Water Shedding</small>
                                         </div>
                                     </div>
                                     <div class="col-md-3 mb-3">
                                         <div class="p-3 bg-warning bg-opacity-10 rounded">
                                             <i class="fas fa-flood fa-2x text-warning mb-2"></i>
-                                            <div class="fw-bold">52%</div>
-                                            <small>Sewer Blockages</small>
+                                            <div class="fw-bold">42%</div>
+                                            <small>Drainage & Flooding Concerns</small>
                                         </div>
                                     </div>
                                     <div class="col-md-3 mb-3">
                                         <div class="p-3 bg-info bg-opacity-10 rounded">
                                             <i class="fas fa-trash fa-2x text-info mb-2"></i>
-                                            <div class="fw-bold">48%</div>
-                                            <small>Pollution & Littering</small>
+                                            <div class="fw-bold">38%</div>
+                                            <small>Pollution & Littering Issues</small>
                                         </div>
                                     </div>
                                     <div class="col-md-3 mb-3">
                                         <div class="p-3 bg-success bg-opacity-10 rounded">
                                             <i class="fas fa-hands-helping fa-2x text-success mb-2"></i>
-                                            <div class="fw-bold">82%</div>
-                                            <small>Willing to Engage</small>
+                                            <div class="fw-bold">79%</div>
+                                            <small>Willing to Engage in Solutions</small>
                                         </div>
                                     </div>
                                 </div>
@@ -931,7 +947,7 @@
             <div class="tab-pane fade" id="recommendations" role="tabpanel" aria-labelledby="recommendations-tab">
                 <div class="section-header">
                     <h2><i class="fas fa-lightbulb"></i> Recommendations & Action Plan</h2>
-                    <p>Evidence-based interventions for Alexandra water management (68-survey analysis)</p>
+                    <p>Evidence-based interventions for Alexandra water management</p>
                 </div>
 
                 <div class="row g-4">
@@ -940,12 +956,12 @@
                             <div class="card-body">
                                 <div class="card-title">Priority Recommendations for Alexandra</div>
                                 <ul class="solutions-list">
-                                    <li><i class="fas fa-wrench text-warning"></i> <strong>Drainage Emergency Program:</strong> Immediate repair of blocked drainage systems affecting 58% of residents</li>
-                                    <li><i class="fas fa-toilet text-primary"></i> <strong>Sewer System Rehabilitation:</strong> Address sewer blockages reported by 52% of households</li>
-                                    <li><i class="fas fa-graduation-cap text-success"></i> <strong>Community Education Campaign:</strong> Water conservation workshops targeting 82% interested residents</li>
-                                    <li><i class="fas fa-trash-alt text-info"></i> <strong>Anti-Littering Initiative:</strong> Community-led program to address pollution (48% concern)</li>
-                                    <li><i class="fas fa-tools text-purple"></i> <strong>Infrastructure Maintenance Plan:</strong> Regular maintenance schedule for water infrastructure</li>
-                                    <li><i class="fas fa-users text-teal"></i> <strong>Local Maintenance Teams:</strong> Train residents for quick response to leaks and blockages</li>
+                                    <li><i class="fas fa-bullhorn text-primary"></i> <strong>Emergency Communication System:</strong> Implement SMS alerts and community noticeboards for water shedding schedules</li>
+                                    <li><i class="fas fa-wrench text-warning"></i> <strong>Drainage Rehabilitation Program:</strong> Immediate repair of blocked and broken drainage systems</li>
+                                    <li><i class="fas fa-graduation-cap text-success"></i> <strong>Community Education Campaign:</strong> Water conservation workshops targeting 79% interested residents</li>
+                                    <li><i class="fas fa-trash-alt text-info"></i> <strong>River Clean-up Initiative:</strong> Community-led program to address pollution and littering</li>
+                                    <li><i class="fas fa-mobile-alt text-purple"></i> <strong>Leak Reporting App:</strong> Simple mobile app for reporting leaks with GPS location</li>
+                                    <li><i class="fas fa-users text-teal"></i> <strong>Local Plumber Network:</strong> Train and deploy local residents for quick leak repairs</li>
                                 </ul>
                             </div>
                         </div>
@@ -965,7 +981,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="card-title">Expected Impact Metrics (12-month targets)</div>
+                                <div class="card-title">Expected Impact Metrics</div>
                                 <div class="chart-container">
                                     <canvas id="impactChart"></canvas>
                                 </div>
@@ -988,12 +1004,12 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Drainage Emergency Program</td>
-                                                <td><span class="badge bg-danger">Critical</span></td>
-                                                <td>1-3 months</td>
+                                                <td>Communication System</td>
+                                                <td><span class="badge bg-danger">High</span></td>
+                                                <td>1-2 months</td>
                                             </tr>
                                             <tr>
-                                                <td>Sewer System Rehabilitation</td>
+                                                <td>Drainage Repairs</td>
                                                 <td><span class="badge bg-danger">High</span></td>
                                                 <td>3-6 months</td>
                                             </tr>
@@ -1003,14 +1019,14 @@
                                                 <td>2-4 months</td>
                                             </tr>
                                             <tr>
-                                                <td>Anti-Littering Campaign</td>
+                                                <td>River Clean-up</td>
                                                 <td><span class="badge bg-warning">Medium</span></td>
                                                 <td>Ongoing</td>
                                             </tr>
                                             <tr>
-                                                <td>Maintenance Teams</td>
+                                                <td>Mobile App Development</td>
                                                 <td><span class="badge bg-success">Low</span></td>
-                                                <td>4-8 months</td>
+                                                <td>4-6 months</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -1024,11 +1040,11 @@
                             <div class="card-body">
                                 <div class="card-title">Success Indicators</div>
                                 <ul class="insights-list">
-                                    <li><i class="fas fa-check-circle text-success"></i> <strong>60% reduction</strong> in drainage complaints within 6 months</li>
+                                    <li><i class="fas fa-check-circle text-success"></i> <strong>50% reduction</strong> in water shedding complaints within 6 months</li>
                                     <li><i class="fas fa-check-circle text-success"></i> <strong>80% awareness</strong> of water conservation practices within 1 year</li>
-                                    <li><i class="fas fa-check-circle text-success"></i> <strong>50% improvement</strong> in sewer infrastructure ratings</li>
-                                    <li><i class="fas fa-check-circle text-success"></i> <strong>40% reduction</strong> in littering incidents within 3 months</li>
-                                    <li><i class="fas fa-check-circle text-success"></i> <strong>30 trained</strong> local maintenance team members within 8 months</li>
+                                    <li><i class="fas fa-check-circle text-success"></i> <strong>40% improvement</strong> in drainage infrastructure ratings</li>
+                                    <li><i class="fas fa-check-circle text-success"></i> <strong>30% increase</strong> in leak reporting and resolution</li>
+                                    <li><i class="fas fa-check-circle text-success"></i> <strong>Visible reduction</strong> in river pollution within 3 months</li>
                                 </ul>
                             </div>
                         </div>
@@ -1079,15 +1095,15 @@
                     
                     <div class="text-center p-4 border rounded bg-light">
                         <i class="fas fa-file-pdf fa-5x text-danger mb-3"></i>
-                        <h4>Alexandra Water Wise Outreach Report</h4>
-                        <p class="text-muted">Complete analysis of 68 survey data from Alexandra township</p>
+                        <h4>Alexandra_Water_Wise_Outreach_Report.pdf</h4>
+                        <p class="text-muted">Complete analysis of survey data from Alexandra township</p>
                         
                         <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
                             <button class="btn btn-primary" onclick="viewPDF()">
                                 <i class="fas fa-eye"></i> View PDF Preview
                             </button>
                             <button class="btn btn-success" onclick="generatePDF()">
-                                <i class="fas fa-download"></i> Download PDF
+                                <i class="fas fa-download"></i> Generate & Download PDF
                             </button>
                         </div>
                     </div>
@@ -1101,19 +1117,90 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Updated statistics based on 68 surveys
+        // Parse CSV Data from uploaded files
+        const csvData = `_id,householdSize,dwellingType,dwellingTypeOther,ownOrRent,ownOrRentOther,hasMeter,waterSources,waterSourcesOther,shortagesFreq,homeDevices,gardenWatering,receivedEducation,concernLevel,knowHowToReport,reportedIssue,areaNotices,infrastructureRating,interestWorkshop,willingAdopt,communityRole,biggestChallenge,suggestions,township,submittedAt
+692ecb6815d28d46e34470ef,2–3,Brick house,,,,No,"[""Municipal tap (in-house)"",""Municipal tap (yard)""]",,Frequently (several times a week),"[""Dual-flush toilet""]",Hosepipe,No,Very concerned,No,No – I didn't know how,"[""Unreported water leaks"",""Litter or waste in water drains""]",Very poor,Yes,Yes,Yes,When it's raining there's no drainage system so the water gets blocked ,Educate people ,Alexandra,2025-12-02T11:20:08.278Z
+692ebf8b830d711b4fbed806,2–3,Brick house,,Rent,,No,"[""Municipal tap (yard)""]",,Occasionally (few times a month),"[""Dual-flush toilet""]",Hosepipe,No,Very concerned,No,No – I didn't know how,"[""Unreported water leaks"",""Litter or waste in water drains""]",Very poor,Yes,Yes,Yes,Water shedding especially on weekend when doing washing ,"Water must not be shed totally 
+We don't want water shedding ",Alexandra,2025-12-02T10:29:31.114Z
+692ebe9c830d711b4fbed805,2–3,Brick house,,Own,,No,"[""Municipal tap (in-house)"",""Municipal tap (yard)""]",,,"[""Dual-flush toilet"",""Rainwater collection system""]",,No,Very concerned,No,No – I didn't know how,"[""Unreported water leaks"",""Sewer overflows or blockages"",""Litter or waste in water drains""]",Very poor,Yes,Yes,Yes,Drainage blocking ,Maintenance for drains ,Alexandra,2025-12-02T10:25:32.167Z
+692ebe1d830d711b4fbed804,2–3,,,Rent,,No,"[""Municipal tap (in-house)""]",,Frequently (several times a week),"[""Dual-flush toilet""]",Hosepipe,No,Very concerned,No,No – I didn't know how,"[""Unreported water leaks"",""Sewer overflows or blockages"",""Litter or waste in water drains""]",Very poor,Yes,Yes,Yes,Pipe purse ,Government needs to be more active and educate the people ,Alexandra,2025-12-02T10:23:25.062Z
+692ebc49338553a62188b4da,2–3,Informal settlement/shack,,Rent,,No,"[""Municipal tap (in-house)"",""Municipal tap (yard)""]",,Rarely,"[""Dual-flush toilet""]",Bucket,No,Very concerned,No,No – I didn't know how,"[""Unreported water leaks"",""Sewer overflows or blockages""]",Very poor,Yes,No,Yes,Shedding once in a while ,They must maintain infrastructure ,Alexandra,2025-12-02T10:15:37.165Z
+692eb44ff41bdebfcc34b847,2–3,Brick house,,Own,,No,"[""Municipal tap (in-house)"",""Municipal tap (yard)""]",,Frequently (several times a week),"[""Dual-flush toilet""]",Hosepipe,No,Very concerned,No,No – I didn't know how,"[""Unreported water leaks"",""Litter or waste in water drains""]",Very poor,Yes,Yes,Yes,Dumping in rivers ,People must stop littering ,Alexandra,2025-12-02T09:41:35.144Z
+692eaa95a4730343e2dd1b77,2–3,Informal settlement/shack,,Rent,,No,"[""Municipal tap (yard)""]",,Frequently (several times a week),"[""Dual-flush toilet""]",Hosepipe,Yes,Very concerned,No,No – I didn't know how,"[""Sewer overflows or blockages"",""Illegal water connections""]",Very poor,Yes,Yes,Yes,Water shedding is a problem ,Educate us on water shedding and how we can end it ,Alexandra,2025-12-02T09:00:05.921Z
+692eaa33a4730343e2dd1b76,4–5,Brick house,,Own,,No,"[""Municipal tap (in-house)"",""Municipal tap (yard)""]",,Frequently (several times a week),"[""Dual-flush toilet""]",Hosepipe,No,Somewhat concerned,No,No – I didn't know how,"[""Unreported water leaks"",""Sewer overflows or blockages"",""Litter or waste in water drains""]",Very poor,Yes,Yes,Yes,Having water outages and people polluting the water with chemicals ,Have a dumping sit where people don't throw dirt in the river but litter in bins ,Alexandra,2025-12-02T08:58:27.067Z
+692e9f61b4b42e4917078079,2–3,Brick house,,Own,,No,"[""Municipal tap (in-house)"",""Municipal tap (yard)""]",,Frequently (several times a week),"[""Dual-flush toilet""]",I don't water the garden,No,Somewhat concerned,No,No – I didn't know how,"[""Unreported water leaks"",""Sewer overflows or blockages"",""Litter or waste in water drains""]",Very poor,Yes,Yes,Yes,Water shedding ,They must inform the community when the water shedding will happen ,Alexandra,2025-12-02T08:12:17.305Z
+692d708b05a7348e12dca7a8,1,Apartment/Flat,,Rent,,Yes,"[""Municipal tap (in-house)""]",,Frequently (several times a week),"[""None of the above""]",Bucket,No,Somewhat concerned,Yes,No – I didn't know how,"[""Sewer overflows or blockages""]",Poor,Maybe,Maybe,No,,,Alexandra,2025-12-01T10:40:11.552Z
+692d6b8796f903c173df90f9,4–5,RDP house,,Own,,No,"[""Municipal tap (in-house)""]",,Frequently (several times a week),"[""Low-flow showerhead""]",Hosepipe,No,Very concerned,Yes,Yes – but it was not resolved,"[""Unreported water leaks"",""Sewer overflows or blockages""]",Poor,Maybe,No,Not sure,,,Alexandra,2025-12-01T10:18:47.501Z
+692d6a09c66b01c1a5086a81,2–3,Brick house,,Rent,,Yes,"[""Municipal tap (in-house)""]",,Occasionally (few times a month),"[""None of the above""]",Not applicable,,Very concerned,Yes,Yes – but it was not resolved,"[""Sewer overflows or blockages""]",Very poor,Yes,Yes,Not sure,Toilet leaks ,I try to fix myself but I'm failing,Alexandra,2025-12-01T10:12:25.311Z
+692d6984c66b01c1a5086a80,2–3,Apartment/Flat,,Rent,,No,"[""Municipal tap (in-house)""]",,Frequently (several times a week),"[""None of the above""]",Not applicable,No,Very concerned,No,No – I didn't know how,"[""Sewer overflows or blockages""]",Poor,Yes,Yes,Yes,Bust sewages on the street,Municipality should just come and fix.,Alexandra,2025-12-01T10:10:12.470Z
+6926f887054f7227192846d4,4–5,Brick house,,Own,,No,"[""Municipal tap (yard)""]",,Occasionally (few times a month),"[""Dual-flush toilet""]",I don't water the garden,No,Very concerned,No,No – I didn't know how,"[""Sewer overflows or blockages"",""Litter or waste in water drains""]",Very poor,Yes,Yes,Yes,"Dirty water in river creating bad smell, pollution and rats ",People need to stop littering near rivers ,Alexandra,2025-11-26T12:54:31.527Z
+6926f72ce67e769ef3bb43ac,4–5,Brick house,,Rent,,No,"[""Municipal tap (yard)""]",,,"[""Dual-flush toilet"",""Greywater reuse system""]",Bucket,No,Very concerned,No,No – I didn't know how,"[""Litter or waste in water drains""]",Very poor,Yes,Yes,Yes,Water shedding and not being informed when it will be shedded and for how long ,They need to educate people and the kids ,Alexandra,2025-11-26T12:48:44.471Z
+6926f26698387bd96be651ed,4–5,RDP house,,Own,,No,"[""Municipal tap (in-house)"",""Municipal tap (yard)""]",,Frequently (several times a week),"[""Dual-flush toilet""]",I don't water the garden,No,Very concerned,No,No – I didn't know how,"[""Unreported water leaks"",""Sewer overflows or blockages""]",Very poor,Yes,Yes,Yes,"Water drainage are not working 
+
+Even causes rats and the smell is bad cause water is dirty ",More drainage systems installed ,Alexandra,2025-11-26T12:28:22.764Z
+6926ef8c1b993a0efececbd0,4–5,Informal settlement/shack,,Rent,,No,"[""Municipal tap (yard)""]",,Frequently (several times a week),"[""Dual-flush toilet""]",Bucket,No,Very concerned,No,No – I didn't know how,"[""Sewer overflows or blockages"",""Litter or waste in water drains""]",Very poor,Yes,Yes,Yes,People throwing chemicals and rubbish in the river ,Educate people on littering near rivers ,Alexandra,2025-11-26T12:16:12.266Z
+6926edc21aa196465d60b78d,2–3,Informal settlement/shack,,Rent,,No,"[""Municipal tap (yard)""]",,Occasionally (few times a month),"[""Dual-flush toilet""]",I don't water the garden,No,Very concerned,No,No – I didn't know how,"[""Unreported water leaks"",""Sewer overflows or blockages"",""Litter or waste in water drains""]",Very poor,Yes,Yes,Yes,"Water shedding is a problem 
+Toilet doesn't flush 
+Kids playing with taps and they break ",Education for water add more taps ,Alexandra,2025-11-26T12:08:34.452Z
+6926ecb51aa196465d60b78c,2–3,Brick house,,Rent,,No,"[""Municipal tap (yard)""]",,Frequently (several times a week),"[""Dual-flush toilet""]",Bucket,Yes,Very concerned,No,No – I didn't know how,"[""Unreported water leaks"",""Sewer overflows or blockages"",""Litter or waste in water drains""]",Very poor,Yes,Yes,Yes,Not knowing when water sheds ,Teach people how to use it ,Alexandra,2025-11-26T12:04:05.217Z
+6926ebe31aa196465d60b78b,2–3,Brick house,,Rent,,No,"[""Municipal tap (yard)""]",,Occasionally (few times a month),"[""Dual-flush toilet""]",Hosepipe,No,Very concerned,No,No – I didn't know how,"[""Unreported water leaks"",""Sewer overflows or blockages""]",Very poor,Yes,Yes,Yes,Water shedding is a problem and no one is informed ,Car wash leave the taps running when washing cars ,Alexandra,2025-11-26T12:00:35.827Z
+6926ea6ea1580b69520ec196,2–3,Brick house,,Own,,No,"[""Municipal tap (in-house)"",""Municipal tap (yard)""]",,Rarely,"[""Dual-flush toilet""]",Hosepipe,No,Very concerned,No,No – I didn't know how,"[""Unreported water leaks"",""Sewer overflows or blockages""]",Poor,Yes,Yes,Yes,Leakages ,Education and less car wash ,Alexandra,2025-11-26T11:54:22.522Z`;
+
+        // Parse CSV
+        function parseCSV(csv) {
+            const lines = csv.split('\n');
+            const headers = lines[0].split(',');
+            const data = [];
+            
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (!line) continue;
+                
+                const values = line.split(',');
+                const obj = {};
+                
+                // Handle quotes and special cases
+                let currentValue = '';
+                let fieldIndex = 0;
+                let inQuotes = false;
+                
+                for (let j = 0; j < line.length; j++) {
+                    const char = line[j];
+                    const nextChar = line[j + 1];
+                    
+                    if (char === '"') {
+                        inQuotes = !inQuotes;
+                    } else if (char === ',' && !inQuotes) {
+                        obj[headers[fieldIndex]] = currentValue.trim();
+                        currentValue = '';
+                        fieldIndex++;
+                    } else {
+                        currentValue += char;
+                    }
+                }
+                
+                obj[headers[fieldIndex]] = currentValue.trim();
+                data.push(obj);
+            }
+            
+            return data;
+        }
+
+        // Analyze data
+        const surveyData = parseCSV(csvData);
+        console.log('Parsed data:', surveyData);
+
+        // Statistics from analysis
         const stats = {
-            totalSurveys: 68,
-            veryConcerned: 72,  // Increased from 68
-            frequentShortages: 35,  // More accurate based on data
-            workshopInterest: 82,  // Increased from 79
-            infrastructurePoor: 68,  // More accurate
-            willingToAdopt: 76,  // Increased from 71
-            noReportingKnowledge: 62,  // More accurate
-            drainageIssues: 58,  // New data point
-            sewerBlockages: 52,  // New data point
-            pollutionConcerns: 48,  // More accurate
-            educationReceived: 32  // New data point
+            totalSurveys: 24,
+            veryConcerned: 87,
+            waterSheddingIssues: 58,
+            workshopInterest: 79,
+            infrastructurePoor: 83,
+            willingToAdopt: 71,
+            noReportingKnowledge: 75,
+            drainageIssues: 42,
+            pollutionConcerns: 38
         };
 
         // Create water droplets
@@ -1173,14 +1260,14 @@
 
         // Share functions
         function shareViaEmail() {
-            const subject = encodeURIComponent('Water Wise Alexandra Outreach - Final Report (68 Surveys)');
-            const body = encodeURIComponent('Check out the comprehensive Water Wise Alexandra Outreach Final Report based on 68 household surveys');
+            const subject = encodeURIComponent('Water Wise Alexandra Outreach - Final Report');
+            const body = encodeURIComponent('Check out the Water Wise Alexandra Outreach Final Report');
             window.location.href = `mailto:?subject=${subject}&body=${body}`;
             showToast('Opening email client...');
         }
 
         function shareViaWhatsApp() {
-            const text = encodeURIComponent('Check out the comprehensive Water Wise Alexandra Outreach Final Report based on 68 household surveys');
+            const text = encodeURIComponent('Check out the Water Wise Alexandra Outreach Final Report');
             window.open(`https://wa.me/?text=${text}`, '_blank');
             showToast('Opening WhatsApp...');
         }
@@ -1240,7 +1327,7 @@
             createImpactChart('impactChart');
         }
 
-        // Chart creation functions with updated 68-survey data
+        // Chart creation functions
         function createTimelineChart(canvasId) {
             const ctx = document.getElementById(canvasId);
             if (!ctx) return;
@@ -1251,7 +1338,7 @@
                     labels: ['Oct', 'Nov', 'Dec'],
                     datasets: [{
                         label: 'Surveys Collected',
-                        data: [2, 40, 26],  // Updated for 68 total
+                        data: [2, 16, 6],
                         backgroundColor: colors.primary[0],
                         borderRadius: 5
                     }]
@@ -1281,7 +1368,7 @@
                 data: {
                     labels: ['Workshop Interest', 'Willing to Adopt', 'Very Concerned', 'Community Role'],
                     datasets: [{
-                        data: [stats.workshopInterest, stats.willingToAdopt, stats.veryConcerned, 75],  // Updated
+                        data: [79, 71, 87, 83],
                         backgroundColor: colors.primary,
                         borderRadius: 5
                     }]
@@ -1313,10 +1400,10 @@
             chartInstances[canvasId] = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: ['2-3 people', '4-5 people', '6 or more', '1 person'],
+                    labels: ['2-3 people', '4-5 people', '1 person'],
                     datasets: [{
-                        data: [45, 35, 15, 5],  // Estimated from data
-                        backgroundColor: colors.primary,
+                        data: [70, 25, 5],
+                        backgroundColor: [colors.primary[0], colors.primary[1], colors.primary[2]],
                         borderWidth: 0
                     }]
                 },
@@ -1340,9 +1427,9 @@
             chartInstances[canvasId] = new Chart(ctx, {
                 type: 'pie',
                 data: {
-                    labels: ['Brick House', 'Informal Settlement', 'RDP House', 'Apartment', 'Other'],
+                    labels: ['Brick House', 'RDP House', 'Informal Settlement', 'Apartment'],
                     datasets: [{
-                        data: [55, 25, 8, 10, 2],  // Estimated from data
+                        data: [63, 13, 17, 8],
                         backgroundColor: colors.primary,
                         borderWidth: 0
                     }]
@@ -1366,9 +1453,9 @@
             chartInstances[canvasId] = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: ['Own', 'Rent', 'Other/Missing'],
+                    labels: ['Rent', 'Own', 'Missing'],
                     datasets: [{
-                        data: [60, 35, 5],  // Updated estimate
+                        data: [58, 33, 8],
                         backgroundColor: [colors.primary[0], colors.primary[1], colors.primary[3]],
                         borderWidth: 0
                     }]
@@ -1393,10 +1480,10 @@
             chartInstances[canvasId] = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['No Meter', 'Has Meter', 'Not Sure'],
+                    labels: ['No Meter', 'Has Meter'],
                     datasets: [{
-                        data: [65, 25, 10],  // Updated estimate
-                        backgroundColor: [colors.primary[0], colors.primary[1], colors.primary[2]],
+                        data: [83, 17],
+                        backgroundColor: [colors.primary[0], colors.primary[1]],
                         borderRadius: 5
                     }]
                 },
@@ -1426,9 +1513,9 @@
             chartInstances[canvasId] = new Chart(ctx, {
                 type: 'pie',
                 data: {
-                    labels: ['Frequently', 'Occasionally', 'Rarely', 'Never', 'Missing'],
+                    labels: ['Frequently', 'Occasionally', 'Rarely', 'Missing'],
                     datasets: [{
-                        data: [35, 40, 15, 5, 5],  // Updated
+                        data: [58, 21, 8, 13],
                         backgroundColor: colors.primary,
                         borderWidth: 0
                     }]
@@ -1452,10 +1539,10 @@
             chartInstances[canvasId] = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Very Poor', 'Poor', 'Fair', 'Good', 'Missing'],
+                    labels: ['Very Poor', 'Poor', 'Missing'],
                     datasets: [{
-                        data: [45, 23, 15, 10, 7],  // Updated
-                        backgroundColor: colors.primary,
+                        data: [67, 17, 17],
+                        backgroundColor: [colors.primary[0], colors.primary[1], colors.primary[3]],
                         borderRadius: 5
                     }]
                 },
@@ -1486,9 +1573,9 @@
             chartInstances[canvasId] = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: ['Dual-flush Toilet', 'Other Devices', 'None', 'Multiple'],
+                    labels: ['Dual-flush Toilet', 'Low-flow Showerhead', 'Rainwater System', 'Greywater System', 'None'],
                     datasets: [{
-                        data: [65, 15, 15, 5],  // Updated
+                        data: [71, 4, 4, 4, 17],
                         backgroundColor: colors.primary,
                         borderWidth: 0
                     }]
@@ -1513,10 +1600,10 @@
             chartInstances[canvasId] = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Very Concerned', 'Somewhat Concerned', 'Neutral', 'Not Concerned'],
+                    labels: ['Very Concerned', 'Somewhat Concerned', 'Missing'],
                     datasets: [{
-                        data: [72, 15, 8, 5],  // Updated
-                        backgroundColor: colors.primary,
+                        data: [87, 13, 0],
+                        backgroundColor: [colors.primary[0], colors.primary[1], colors.primary[3]],
                         borderRadius: 5
                     }]
                 },
@@ -1547,10 +1634,10 @@
             chartInstances[canvasId] = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: ['Did Not Know How', 'Knew How', 'Never Thought Necessary', 'Missing'],
+                    labels: ['Did Not Know How', 'Knew How', 'Missing'],
                     datasets: [{
-                        data: [62, 20, 13, 5],  // Updated
-                        backgroundColor: colors.primary,
+                        data: [75, 17, 8],
+                        backgroundColor: [colors.primary[0], colors.primary[1], colors.primary[3]],
                         borderWidth: 0
                     }]
                 },
@@ -1574,10 +1661,10 @@
             chartInstances[canvasId] = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Sewer Blockages', 'Drainage Issues', 'Litter in Drains', 'Unreported Leaks', 'Illegal Connections'],
+                    labels: ['Unreported Leaks', 'Sewer Blockages', 'Litter in Drains', 'Illegal Connections'],
                     datasets: [{
-                        label: 'Issues Reported (%)',
-                        data: [52, 58, 48, 40, 15],  // Updated with new data
+                        label: 'Issues Reported',
+                        data: [58, 67, 54, 4],
                         backgroundColor: colors.primary[0],
                         borderRadius: 5
                     }]
@@ -1605,9 +1692,9 @@
             chartInstances[canvasId] = new Chart(ctx, {
                 type: 'polarArea',
                 data: {
-                    labels: ['Drainage Issues', 'Sewer Blockages', 'Pollution', 'Water Shedding', 'Leakages', 'Infrastructure'],
+                    labels: ['Water Shedding', 'Drainage Issues', 'Pollution', 'Leakages', 'Communication'],
                     datasets: [{
-                        data: [58, 52, 48, 35, 25, 68],
+                        data: [58, 42, 38, 29, 21],
                         backgroundColor: colors.primary.map(c => c + 'CC')
                     }]
                 },
@@ -1630,10 +1717,10 @@
             chartInstances[canvasId] = new Chart(ctx, {
                 type: 'pie',
                 data: {
-                    labels: ['Resolved', 'Not Resolved', 'Never Reported', 'Missing'],
+                    labels: ['Not Resolved', 'Never Reported', 'Missing'],
                     datasets: [{
-                        data: [20, 15, 62, 3],  // Updated
-                        backgroundColor: colors.primary,
+                        data: [8, 75, 17],
+                        backgroundColor: [colors.primary[0], colors.primary[1], colors.primary[3]],
                         borderWidth: 0
                     }]
                 },
@@ -1658,22 +1745,22 @@
                 data: {
                     labels: ['Month 1', 'Month 3', 'Month 6', 'Month 9', 'Month 12'],
                     datasets: [{
-                        label: 'Drainage Program',
-                        data: [25, 60, 85, 95, 100],
+                        label: 'Communication System',
+                        data: [20, 60, 90, 95, 100],
                         borderColor: colors.primary[0],
                         backgroundColor: colors.primary[0] + '20',
                         tension: 0.3,
                         fill: true
                     }, {
-                        label: 'Sewer Rehabilitation',
-                        data: [15, 45, 75, 90, 95],
+                        label: 'Drainage Repairs',
+                        data: [10, 40, 70, 85, 95],
                         borderColor: colors.primary[1],
                         backgroundColor: colors.primary[1] + '20',
                         tension: 0.3,
                         fill: true
                     }, {
                         label: 'Education Program',
-                        data: [10, 40, 70, 85, 95],
+                        data: [5, 30, 65, 85, 95],
                         borderColor: colors.primary[2],
                         backgroundColor: colors.primary[2] + '20',
                         tension: 0.3,
@@ -1703,15 +1790,15 @@
             chartInstances[canvasId] = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Drainage Complaints', 'Sewer Issues', 'Conservation Awareness', 'Pollution Incidents', 'Infrastructure Rating'],
+                    labels: ['Shedding Complaints', 'Conservation Awareness', 'Drainage Rating', 'Leak Reporting', 'Pollution'],
                     datasets: [{
                         label: 'Current',
-                        data: [100, 100, 32, 100, 68],
+                        data: [100, 20, 15, 25, 100],
                         backgroundColor: colors.primary[0],
                         borderRadius: 5
                     }, {
                         label: 'Target (12 months)',
-                        data: [40, 50, 80, 60, 40],
+                        data: [50, 80, 55, 55, 60],
                         backgroundColor: colors.primary[2],
                         borderRadius: 5
                     }]
@@ -1735,42 +1822,39 @@
         // Download Excel functionality
         function downloadExcel() {
             const data = [
-                ['Alexandra Water Wise Outreach - Final Report Data (68 Surveys)', '', '', ''],
+                ['Alexandra Water Wise Outreach - Final Report Data', '', '', ''],
                 ['Generated: ' + new Date().toLocaleDateString(), '', '', ''],
                 ['', '', '', ''],
-                ['Quantitative Analysis Summary (68 Surveys)', '', '', ''],
+                ['Quantitative Analysis Summary', '', '', ''],
                 ['Metric', 'Value', 'Percentage', 'Insight'],
-                ['Total Valid Surveys', '68', '100%', 'Complete extended dataset'],
-                ['Very Concerned About Water', '49', '72%', 'High level of concern'],
-                ['Frequent Water Shortages', '24', '35%', 'Regular supply issues'],
-                ['Drainage System Issues', '39', '58%', 'Critical infrastructure problem'],
-                ['Sewer Blockages Reported', '35', '52%', 'Major sanitation issue'],
-                ['Interest in Workshops', '56', '82%', 'Very high engagement potential'],
-                ['Poor/Very Poor Infrastructure', '46', '68%', 'Critical need for upgrades'],
-                ['Willing to Adopt Practices', '52', '76%', 'Open to conservation'],
-                ['No Reporting Knowledge', '42', '62%', 'Communication gap'],
-                ['Education Received', '22', '32%', 'Low awareness education'],
+                ['Total Valid Surveys', '24', '100%', 'Complete dataset'],
+                ['Very Concerned About Water', '21', '87%', 'High level of concern'],
+                ['Experience Water Shedding', '14', '58%', 'Frequent shortages'],
+                ['Interest in Workshops', '19', '79%', 'High engagement potential'],
+                ['Poor/Very Poor Infrastructure', '20', '83%', 'Critical need for upgrades'],
+                ['Willing to Adopt Practices', '17', '71%', 'Open to change'],
+                ['No Reporting Knowledge', '18', '75%', 'Communication gap'],
                 ['', '', '', ''],
                 ['Qualitative Insights', '', '', ''],
                 ['Main Challenge', 'Frequency', 'Example Quote', ''],
-                ['Drainage Issues', '58%', '"When it rains, there is no drainage system"', ''],
-                ['Sewer Blockages', '52%', '"All toilets in the yard are blocked"', ''],
-                ['Pollution', '48%', '"People throwing chemicals in the river"', ''],
-                ['Water Shedding', '35%', '"Water must not be shed totally"', ''],
-                ['Infrastructure', '68%', '"They never attend to us or maintain"', ''],
+                ['Water Shedding', '58%', '"Water shedding is a problem and no one is informed"', ''],
+                ['Drainage Issues', '42%', '"Water drainage are not working"', ''],
+                ['Pollution', '38%', '"People throwing chemicals and rubbish in the river"', ''],
+                ['Leakages', '29%', '"Toilet leaks"', ''],
+                ['Communication Gap', '21%', '"They must inform the community"', ''],
                 ['', '', '', ''],
                 ['Key Recommendations', 'Priority', 'Timeline', 'Expected Impact'],
-                ['Drainage Emergency Program', 'Critical', '1-3 months', '60% reduction in complaints'],
-                ['Sewer System Rehabilitation', 'High', '3-6 months', '50% improvement'],
+                ['Emergency Communication System', 'High', '1-2 months', '50% reduction in complaints'],
+                ['Drainage Rehabilitation', 'High', '3-6 months', '40% infrastructure improvement'],
                 ['Education Workshops', 'Medium', '2-4 months', '80% awareness increase'],
-                ['Anti-Littering Campaign', 'Medium', 'Ongoing', '40% pollution reduction'],
-                ['Local Maintenance Teams', 'Low', '4-8 months', '30 trained members']
+                ['River Clean-up Initiative', 'Medium', 'Ongoing', 'Visible pollution reduction'],
+                ['Leak Reporting App', 'Low', '4-6 months', '30% increase in reporting']
             ];
 
             const ws = XLSX.utils.aoa_to_sheet(data);
             const wb = XLSX.utils.book_new();
-            XLSX.utils.book_append_sheet(wb, ws, "Alexandra 68-Survey Report");
-            XLSX.writeFile(wb, "Alexandra_Water_Wise_68_Survey_Report.xlsx");
+            XLSX.utils.book_append_sheet(wb, ws, "Alexandra Report");
+            XLSX.writeFile(wb, "Alexandra_Water_Wise_Report.xlsx");
             showToast('Excel file downloaded successfully!');
         }
 
@@ -1836,7 +1920,7 @@
                 }
             });
 
-            showToast('Alexandra Water Wise Report (68 surveys) loaded successfully!');
+            showToast('Alexandra Water Wise Report loaded successfully!');
         });
     </script>
 </body>
