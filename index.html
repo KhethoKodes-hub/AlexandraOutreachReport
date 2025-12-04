@@ -433,6 +433,96 @@
         }
     }
 }
+/* Mobile Responsive Fix for ALL Black Fonts */
+@media (max-width: 768px) {
+    /* Fix navigation bar text color on mobile */
+    .nav-pills .nav-link {
+        color: #000000 !important; /* Black text on mobile */
+        background: rgba(255, 255, 255, 0.95) !important;
+        border: 2px solid #0066cc !important;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+    
+    .nav-pills .nav-link i {
+        color: #000000 !important; /* Black icons on mobile */
+    }
+    
+    .nav-pills .nav-link.active {
+        background: #0066cc !important;
+        color: white !important;
+        border-color: #0066cc !important;
+    }
+    
+    .nav-pills .nav-link.active i {
+        color: white !important;
+    }
+    
+    /* Fix action buttons (Print, Download, Share) */
+    .btn-custom {
+        color: #000000 !important; /* Black text */
+        background: rgba(255, 255, 255, 0.95) !important;
+        border: 2px solid #0066cc !important;
+    }
+    
+    .btn-custom i {
+        color: #000000 !important; /* Black icons */
+    }
+    
+    .btn-custom:hover {
+        background: #0066cc !important;
+        color: white !important;
+        border-color: #0066cc !important;
+    }
+    
+    .btn-custom:hover i {
+        color: white !important;
+    }
+    
+    /* Fix data sources badge */
+    .date-badge {
+        color: #000000 !important; /* Black text */
+        background: rgba(255, 255, 255, 0.95) !important;
+        border: 2px solid #0066cc !important;
+    }
+    
+    .date-badge .pulse-dot {
+        background: #000000 !important; /* Black dot */
+    }
+    
+    /* Keep PDF button red (or make it black too if you prefer) */
+    .pdf-btn {
+        /* Option 1: Keep red as per original */
+        background: linear-gradient(135deg, #dc3545, #c82333) !important;
+        color: white !important;
+        border: 2px solid #dc3545 !important;
+    }
+    
+    .pdf-btn i {
+        color: white !important;
+    }
+    
+    /* Option 2: Make PDF button also black 
+    .pdf-btn {
+        color: #000000 !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        border: 2px solid #dc3545 !important;
+    }
+    
+    .pdf-btn i {
+        color: #000000 !important;
+    }
+    
+    .pdf-btn:hover {
+        background: #dc3545 !important;
+        color: white !important;
+    }
+    
+    .pdf-btn:hover i {
+        color: white !important;
+    }
+    */
+}
     </style>
 </head>
 <body>
